@@ -1,0 +1,17 @@
+<data>
+    <type>
+        <type name="object">drone</type>
+        <type name="version">X2</type>
+        <type name="uuid">X4520265</type>
+    </type>
+    <specs>
+      	<specs name="weight">30000</specs> <!-- weight in grammes -->
+      	<specs name="maxheight">2000</specs> <!-- meters -->
+      	<specs name="maxspeed">25</specs> <!-- km/h -->
+      	<specs name="infleet">false</specs>
+    </specs>
+    <equipment>
+        <equipment name="camera">true</equipment>
+        <equipment name="windsensor">true</equipment>
+    </equipment>
+</data>

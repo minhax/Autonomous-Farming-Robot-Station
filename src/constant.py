@@ -1,0 +1,1 @@
+SERVER_URL = "192.168.40.16:8080/mapping.html"

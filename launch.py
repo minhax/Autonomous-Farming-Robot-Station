@@ -2,16 +2,19 @@
 from src.Navigation.Controller import *
 from src.Commands.Actions import *
 from src.Scheduler.Scheduler import *
+from Websocket import Client
 
 
 def start():
+    # TODO : Fix server side for WebSocket
+    # Client.initiate()
     # 1) Initialize Controllers and DP objects
     navigation = Controller()
     invoker = Invoker()
     # 2) Load XML File and create corresponding commands
     # 2) a) Initialization command for the Navigation Controller
     initialise_robot = initialization(navigation)
-    # 3) 
+    # 3)
     invoker.store_command(initialise_robot)
     invoker.execute_commands()
     print("[Main] Navigation Controller Initialisation done")

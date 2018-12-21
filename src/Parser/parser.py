@@ -12,6 +12,7 @@ class Parser(object):
 
     dom = None
     type = None
+    object = None
 
     def start(self, argument):
         # self.dom = main DOM object
@@ -33,7 +34,7 @@ class Parser(object):
     def lettuce_field(self):
         # Create the field and set its attribute
         field = Field(self.dom)
-        return field
+        self.object = field
         # TODO Temporarely : Print result
         #map(lambda x : print x, field.floordict)
         # TODO Long Time : Send information through websocket to your server where you will do a mapping
@@ -42,12 +43,13 @@ class Parser(object):
     def strawberry_field(self):
         #TODO
         field = Field(self.dom)
-        return field
+        self.object = field
 
     @staticmethod
     def R1_robot(self):
         # TODO
         robot = Robots(self.dom)
+        self.object = robot
         fleetmanager = FleetManager.getInstance()
         fleetmanager.store_engine(robot, "Created")
 

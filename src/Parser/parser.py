@@ -10,15 +10,14 @@ from Machines.Robots import Robots
 
 class Parser(object):
 
-    dom = None
-    type = None
-    object = None
+    def __init__(self, argument):
 
-    def start(self, argument):
-        # self.dom = main DOM object
+        self.object = None
+        # main DOM object
         self.dom = minidom.parse(argument)
         # self.type = type DOM
         self.type = self.dom.getElementsByTagName('type')
+
         self.type_of_object(self)
 
     @staticmethod
@@ -33,8 +32,7 @@ class Parser(object):
     @staticmethod
     def lettuce_field(self):
         # Create the field and set its attribute
-        field = Field(self.dom)
-        self.object = field
+        self.object = Field(self.dom)
         # TODO Temporarely : Print result
         #map(lambda x : print x, field.floordict)
         # TODO Long Time : Send information through websocket to your server where you will do a mapping
@@ -42,16 +40,18 @@ class Parser(object):
     @staticmethod
     def strawberry_field(self):
         #TODO
-        field = Field(self.dom)
-        self.object = field
+        self.object = Field(self.dom)
 
     @staticmethod
     def R1_robot(self):
         # TODO
-        robot = Robots(self.dom)
-        self.object = robot
+        self.object = Robots(self.dom)
         fleetmanager = FleetManager.getInstance()
-        fleetmanager.store_engine(robot, "Created")
+        fleetmanager.store_engine(self.object, "Created")
+
+
+
+
 
 # Use unlink() function to free memory at the end
 

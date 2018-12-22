@@ -1,11 +1,12 @@
 # Parser test
 from Mapping.Mapping import Mapping
+from Parser.parser import Parser
 
 
 def start():
 
-    map = Mapping('Parser/files/field.xml')
-    map2 = Mapping('Parser/files/robot.xml')
+    parser = Parser('Parser/files/field.xml')
+    Mapping(parser.object)
 
     # Create mapping of object on
 

@@ -14,8 +14,11 @@ class Field(object):
 
     @staticmethod
     def type_of_attribute(self, attribute):
-        method_name = 'add_' + str(attribute[0].localName)
+        # Define the method we want to call
+        method_name = 'add_' + str(attribute[0].localName).lower()
+        # store DOM object from TagName
         self.attribute = attribute
+        # Call method whose name is method_name and giving one parameter + lambda in case of Exception
         method = getattr(self, method_name, lambda: "Invalid type")
         return method(self)
 

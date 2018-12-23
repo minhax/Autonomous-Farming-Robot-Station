@@ -24,7 +24,7 @@ class Parser(object):
     def type_of_object(self):
 
         # Example : lettuce_field
-        method_name = str(self.type[2].firstChild.data) + '_' + str(self.type[1].firstChild.data)
+        method_name = str(self.type[2].firstChild.data).lower() + '_' + str(self.type[1].firstChild.data).lower()
         method = getattr(self, method_name, lambda: "Invalid object, please check mispelling in XML file")
         return method(self)
 
@@ -43,7 +43,7 @@ class Parser(object):
         self.object = Field(self.dom)
 
     @staticmethod
-    def R1_robot(self):
+    def r1_robot(self):
         # TODO
         self.object = Robots(self.dom)
         fleetmanager = FleetManager.getInstance()

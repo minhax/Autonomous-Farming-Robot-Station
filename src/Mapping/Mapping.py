@@ -31,7 +31,7 @@ class Mapping(object):
         self.object = object
         self.pointDict ={}
         self.generateDict(self)
-        self.sendMapToServer(self.pointDict)
+       # self.sendMapToServer(self.pointDict)
 
     @staticmethod
     def sendMapToServer(self, item):

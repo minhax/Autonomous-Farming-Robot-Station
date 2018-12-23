@@ -18,7 +18,7 @@ class Robots(object):
 
     @staticmethod
     def type_of_attribute(self, attribute):
-        method_name = 'add_' + str(attribute[0].localName)
+        method_name = 'add_' + str(attribute[0].localName).lower()
         self.attribute = attribute
         method = getattr(self, method_name, lambda: "Invalid type")
         return method(self)

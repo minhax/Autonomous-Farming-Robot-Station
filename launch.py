@@ -1,9 +1,7 @@
 # Messages exchange test
-from src.Navigation.Controller import *
-from src.Commands.Actions import *
-from src.Scheduler.Scheduler import *
-from Websocket import Client
-
+from src.IA_Robot.src.Navigation.Controller import *
+from src.IA_Robot.src.Scheduler.Scheduler import *
+from src.Common.Commands.Actions import *
 
 def start():
     # TODO : Fix server side for WebSocket

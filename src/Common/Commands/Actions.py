@@ -20,12 +20,26 @@ class Action(Command):
     def execute(self):
         pass
 
-#TODO Add method to dynamically create tasks depending on the action (or linked list?)
+# TODO Add method to dynamically create tasks depending on the action (or linked list?)
 
 # Concrete Action class
-class initialization(Action):
+
+
+class Initialization(Action):
 
     # Define a binding between a Receiver and an action. Implement Execute by invoking the
     # Corresponding operations(s) on Receiver
     def execute(self):
-        self._receiver.initialize()
+        self._receiver.initialize_simulation()
+
+
+class Weeding(Action):
+
+    # We store a mapping into the Command: Do the Weeding on this mapping
+    def __init__(self, mapping):
+        self.mapping = mapping
+    # Define a binding between a Receiver and an action. Implement Execute by invoking the
+    # Corresponding operations(s) on Receiver
+
+    def execute(self):
+        self._receiver.weeding_simulation(self.mapping)

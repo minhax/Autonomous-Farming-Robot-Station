@@ -3,12 +3,11 @@ import abc
 
 class Command(object):
 
-    # Add a receiver to the command
     __metaclass__ = abc.ABCMeta
 
+    # Add a receiver to the command
     def __init__(self, receiver):
         self._receiver = receiver
-        self._status_list = []
 
     @abc.abstractmethod
     def execute(self):

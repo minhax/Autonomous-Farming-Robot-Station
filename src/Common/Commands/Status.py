@@ -9,7 +9,7 @@ class Status():
     PAUSED              =       ('PAUSED')
     ERROR               =       ('ERROR')
 
-    def __init__(self, message):
+    def __init__(self, message="Default message"):
         self.message = message
         # Creation Time
         self.beginTimeStamp = datetime.datetime.now().isoformat()

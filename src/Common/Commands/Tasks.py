@@ -1,18 +1,20 @@
 from Commands import Command
+from Status import Status
 import abc
-
 # Each Task has one status containing one message and a timestamp
+
+
 class Tasks(Command):
 
-    #Dictionnary containing timestamp as a key and Status msg as a Value
-    status = {}
+    # Dictionnary containing timestamp as a key and Status msg as a Value
+
     def __init__(self, receiver):
-        self.receiver = receiver
+        self._receiver = receiver
+        self.status = Status()  # Tester si on voit bien default message
 
     @abc.abstractmethod
     def execute(self):
         pass
-
 
     def toString(self):
         for status in self._status:

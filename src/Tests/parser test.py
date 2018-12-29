@@ -6,7 +6,7 @@ from Parser.parser import *
 def start():
 
     parser = Parser('Parser/files/field.xml')
-    Mapping(parser.object)
+    Mapping(parser.obj)
     parser = Parser('Parser/files/robot.xml')
     # Create mapping of object on
 

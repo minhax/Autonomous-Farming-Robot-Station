@@ -27,5 +27,6 @@ class FleetManager:
         self.machines[machine] = status
 
     def remove_engine(self, engine):
-        self.engines.remove(engine)
+        self.machines.pop(engine, None)
+
 

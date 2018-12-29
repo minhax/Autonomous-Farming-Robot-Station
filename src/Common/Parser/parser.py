@@ -12,7 +12,7 @@ class Parser(object):
 
     def __init__(self, argument):
 
-        self.object = None
+        self.obj = None
         # main DOM object
         self.dom = minidom.parse(argument)
         # self.type = type DOM
@@ -32,27 +32,16 @@ class Parser(object):
     @staticmethod
     def lettuce_field(self):
         # Create the field and set its attribute
-        self.object = Field(self.dom)
-        # TODO Temporarely : Print result
-        #map(lambda x : print x, field.floordict)
-        # TODO Long Time : Send information through websocket to your server where you will do a mapping
+        self.obj = Field(self.dom)
 
     @staticmethod
     def strawberry_field(self):
         #TODO
-        self.object = Field(self.dom)
+        self.obj = Field(self.dom)
 
     @staticmethod
     def r1_robot(self):
-        # TODO
-        self.object = Robots(self.dom)
-        # Declare yourself to the fleet manager
-        #fleetmanager = FleetManager.getInstance()
-        #fleetmanager.store_engine(self.object, "Created")
-
-
-
-
+        self.obj = Robots(self.dom)
 
 # Use unlink() function to free memory at the end
 

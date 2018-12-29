@@ -1,5 +1,4 @@
 from src.Common.Commands.Status import Status
-# TODO: Refactor code!!
 
 
 class Robots(object):
@@ -15,6 +14,8 @@ class Robots(object):
         self.type_of_attribute(self, attribute.getElementsByTagName('type'))
         self.type_of_attribute(self, attribute.getElementsByTagName('specs'))
         self.type_of_attribute(self, attribute.getElementsByTagName('equipment'))
+        self.IPAddress = None
+        self.port = None
 
     @staticmethod
     def type_of_attribute(self, attribute):
@@ -57,3 +58,4 @@ class Robots(object):
                 # TODO : Non-modular code
                 self.status.message = "Inactive"
         print self.equipmentDict
+

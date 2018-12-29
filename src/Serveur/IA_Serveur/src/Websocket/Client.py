@@ -34,6 +34,7 @@ def on_open(ws):
         print "thread terminating..."
     thread.start_new_thread(run, ())
 
+
 def initiate():
     websocket.enableTrace(False)
     global ws

@@ -26,6 +26,3 @@ class Scheduler:
         for command in self._commands:
             command.execute()
 
-    def transfer_data_to_serveur(self, data, serveurIP, serveurPort):
-        pass
-        # Do a socket connection on serveurIP and port and transfer data.

@@ -4,7 +4,6 @@ from Common.Point import Point
 # Mapping manager
 
 
-
 class Mapping(object):
 
     # Global websocket variable
@@ -18,7 +17,7 @@ class Mapping(object):
         self.obj = obj
         self.pointDict = {}
         self.generateDict(self)
-       # self.sendMapToServer(self.pointDict)
+        # self.sendMapToServer(self.pointDict)
 
     @staticmethod
     def sendMapToServer(self, item):
@@ -29,8 +28,8 @@ class Mapping(object):
     @staticmethod
     def generateDict(self):
 
-    # Depending on rows in self.object.dimDict, calculate number of points
-        pointsnumber = int(self.object.dimDict.get("rows")) * 2
+        # Depending on rows in self.object.dimDict, calculate number of points
+        pointsnumber = int(self.obj.dimDict.get("rows")) * 2
 
     # for loop from point 0 to point pointsnumber. We decide that point 0 is at the beginning of the first row
         point0 = Point(0, 0)
@@ -38,7 +37,7 @@ class Mapping(object):
         point0.name = "Point" + str(0)
         self.pointDict[point0.name] = point0
 
-        point1 = Point(0, int(self.object.dimDict.get("length")))
+        point1 = Point(0, int(self.obj.dimDict.get("length")))
         point1.name = "Point" + str(1)
         self.pointDict[point1.name] = point1
 
@@ -47,11 +46,11 @@ class Mapping(object):
             point.name = "Point" + str(x)
             if x % 2 == 0:
                 Mapping.y = 0
-                Mapping.x += int(self.object.dimDict.get("distanceBetweenRows"))
+                Mapping.x += int(self.obj.dimDict.get("distanceBetweenRows"))
 
             else:
-                Mapping.y = int(self.object.dimDict.get("length"))
-                Mapping.x += int(self.object.dimDict.get("distanceBetweenRows"))
+                Mapping.y = int(self.obj.dimDict.get("length"))
+                Mapping.x += int(self.obj.dimDict.get("distanceBetweenRows"))
 
             self.pointDict[point.name] = point
 

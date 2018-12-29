@@ -13,6 +13,7 @@ class Action(Command):
     # Receive a list of tasks when created, corresponding to tasks it has to execute in the Receiver
 
     def __init__(self, receiver):
+        super(Action, self).__init__(receiver)
         self._receiver = receiver
         self.tasks = []
 
@@ -36,7 +37,8 @@ class Initialization(Action):
 class Weeding(Action):
 
     # We store a mapping into the Command: Do the Weeding on this mapping
-    def __init__(self, mapping):
+    def __init__(self, receiver, mapping):
+        super(Weeding, self).__init__(receiver)
         self.mapping = mapping
     # Define a binding between a Receiver and an action. Implement Execute by invoking the
     # Corresponding operations(s) on Receiver

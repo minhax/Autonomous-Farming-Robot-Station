@@ -3,8 +3,7 @@
 class WeedingController:
 
     def __init__(self, receiver):
-        # TODO Add code for NavigationController initialisation
-        #TODO Add builder for adding all the sensors
+        # TODO Add builder for adding all the sensors
         self.roboticArm = None
         self.robot = receiver
 
@@ -20,7 +19,7 @@ class WeedingController:
 
     @staticmethod
     def computeRoboticArmInfos():
-        #TODO Create Status
+        # TODO Create Status
         print("Robotic Arm is fine")
 
     def weeding(self):

@@ -4,7 +4,6 @@ from Navigation_Robot.src.Navigation.NavigationController import *
 from Commands.Actions import *
 
 def start():
-    # TODO : Fix server side for WebSocket
     # Client.initiate()
     # 1) Initialize Controllers and DP objects
     navigation = NavigationController()

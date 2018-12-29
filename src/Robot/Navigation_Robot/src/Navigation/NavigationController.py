@@ -10,9 +10,8 @@ class NavigationController:
     historian = []
 
     def __init__(self, receiver):
-        # TODO Add code for NavigationController initialisation
         # TODO Add builder for adding all the sensors
-        self.Lidar = None
+        # self.Lidar = None
         self.robot = receiver
         # Add HashMap
 
@@ -21,7 +20,7 @@ class NavigationController:
         # Check all navigation components status
         self.computeSensorInfos()
         # Add policy
-        print ("Initialisation done for Navigation NavigationController")
+        print ("[Robot] Initialisation done for NavigationController")
 
     @staticmethod
     def computeSensorInfos():
@@ -68,7 +67,7 @@ class NavigationController:
 
     @staticmethod
     def sendPosition( self, coord):
-        #TODO : socket communication for sending coordinates of the robot
+        # TODO : socket communication for sending coordinates of the robot
         pass
 
 

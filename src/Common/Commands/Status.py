@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 import datetime
 
+
 class Status():
 
     SUCCESS             =       ('SUCCESS')
-    CRITICAL            =       ('CRITICAL')
-    PENDING             =       ('PENDING')
-    PAUSED              =       ('PAUSED')
     ERROR               =       ('ERROR')
+    INACTIVE            =       ('INACTIVE')
 
     def __init__(self, message="Default message"):
         self.message = message

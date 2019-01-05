@@ -7,7 +7,7 @@ class Robots(object):
     equipmentDict = {}
     typeDict = {}
     inFleet = False
-    attribute = None
+    _attribute = None
     status = Status("Inactive")
 
     def __init__(self, attribute):
@@ -20,17 +20,17 @@ class Robots(object):
     @staticmethod
     def type_of_attribute(self, attribute):
         method_name = 'add_' + str(attribute[0].localName).lower()
-        self.attribute = attribute
+        self._attribute = attribute
         method = getattr(self, method_name, lambda: "Invalid type")
         return method(self)
 
     @staticmethod
     def add_type(self):
         # Robot ought to be deployed in fleet
-        # self.inFleet = attribute.attributes['infleet'].value
+        # self.inFleet = _attribute.attributes['infleet'].value
         # TODO: Deploy fleet
         # 1) Insert this robot in the robot manager
-        for element in self.attribute[0].childNodes:
+        for element in self._attribute[0].childNodes:
             if element.firstChild is None:
                 pass
             else:
@@ -39,7 +39,7 @@ class Robots(object):
 
     @staticmethod
     def add_specs(self):
-        for element in self.attribute[0].childNodes:
+        for element in self._attribute[0].childNodes:
             if element.firstChild is None:
                 pass
             else:
@@ -50,7 +50,7 @@ class Robots(object):
     @staticmethod
     def add_equipment(self):
         # We loop on all attributes
-        for element in self.attribute[0].childNodes:
+        for element in self._attribute[0].childNodes:
             if element.firstChild is None:
                 pass
             else:
@@ -59,3 +59,5 @@ class Robots(object):
                 self.status.message = "Inactive"
         print self.equipmentDict
 
+    def get_robot_id(self):
+        return self.typeDict["uuid"]

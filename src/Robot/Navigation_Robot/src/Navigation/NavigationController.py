@@ -15,12 +15,36 @@ class NavigationController:
         self.robot = receiver
         # Add HashMap
 
-    def initialize_simulation(self):
+    def sync_navigator_simulation(self):
 
         # Check all navigation components status
         self.computeSensorInfos()
-        # Add policy
-        print ("[Robot] Initialisation done for NavigationController")
+
+        print ("[Robot] Sync navigator done for NavigationController")
+        return Status("Success")
+
+    def init_wheels_simulation(self):
+
+        # Check all navigation components status
+        self.computeSensorInfos()
+
+        print ("[Robot] Wheels for NavigationController")
+        return Status("Success")
+
+    def debug_sync_navigator_simulation(self):
+
+        # Check all navigation components status
+        self.computeSensorInfos()
+
+        print ("[Robot] Debugging of sync Nav done for NavigationController")
+        return Status("Success")
+
+    def end_of_task_simulation(self):
+
+        # Deactivate concerned component
+
+        print ("[Robot] End of Task received, concerning component deactivated")
+        return Status("Success")
 
     @staticmethod
     def computeSensorInfos():
@@ -29,7 +53,7 @@ class NavigationController:
         # 2) TODO Process Data
         # 3) Change Status according to results
             # 3) a) Creation of the status request
-        status = Status("COMPLETE")
+        status = Status("Success")
         time.sleep(5)
         status.endTimeStamp = datetime.datetime.now().isoformat()
 
@@ -67,7 +91,7 @@ class NavigationController:
 
     @staticmethod
     def sendPosition( self, coord):
-        # TODO : socket communication for sending coordinates of the robot
+        # TODO : s communication for sending coordinates of the robot
         pass
 
 

@@ -5,9 +5,8 @@ class Messages(object):
 
     __metaclass__ = abc.ABCMeta
 
-    def __init__(self, data):
+    def __init__(self, data=None):
         self.data = data
-        pass
 
     @abc.abstractmethod
     def treatment(self):

@@ -1,5 +1,4 @@
 import json
-from src.Serveur.IA_Serveur.src.Websocket.Client import *
 from Common.Point import Point
 # Mapping manager
 
@@ -17,13 +16,6 @@ class Mapping(object):
         self.obj = obj
         self.pointDict = {}
         self.generateDict(self)
-        # self.sendMapToServer(self.pointDict)
-
-    @staticmethod
-    def sendMapToServer(self, item):
-
-        jsonObject = json.dumps(item)
-        #ws.send(jsonObject)
 
     @staticmethod
     def generateDict(self):
@@ -55,7 +47,7 @@ class Mapping(object):
             self.pointDict[point.name] = point
 
         print self.pointDict
-        print self.pointDict.__len__()
+        #print self.pointDict.__len__()
 
 
 

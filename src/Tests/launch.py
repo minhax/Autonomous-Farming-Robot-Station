@@ -9,8 +9,8 @@ def start():
     navigation = NavigationController()
     invoker = Scheduler(navigation)
     # 2) Load XML File and create corresponding commands
-    # 2) a) Initialization command for the Navigation NavigationController done in the scheduller
-    initialise_robot = Initialization(navigation)
+    # 2) a) sync_navigator command for the Navigation NavigationController done in the scheduller
+    initialise_robot = sync_navigator(navigation)
     # 3)
     invoker.store_command(initialise_robot)
     invoker.execute_commands()

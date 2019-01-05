@@ -1,14 +1,15 @@
 # coding: utf-8
-
+import json
 import socket
 import threading
+import pickle
 
 
 class Client(threading.Thread):
 
     destination_address = None
     destination_port = None
-    socket = None
+    s = None
 
     def __init__(self, address_ip, message, port=1111):
         super(Client, self).__init__()
@@ -17,8 +18,12 @@ class Client(threading.Thread):
         self.destination_port = port
 
     def run(self):
-        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.connect((self.destination_address, self.destination_port))
-        file_name = None
+        self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.s.connect((self.destination_address, self.destination_port))
         print("Sending Message:")
-        socket.send(file_name.encode())
+        # Do we need serialization in Python?
+        self.s.sendall(pickle.dumps(self.message))
+        #self.s.sendall(json.dumps(self.message))
+        # Is close necessary?
+        self.s.close()
+        print("Message sent:")

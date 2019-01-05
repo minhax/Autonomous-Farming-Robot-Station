@@ -1,5 +1,5 @@
-from Commands.Actions import Initialization
-from IA_Robot.src.Scheduler.Scheduler import Scheduler
+from Commands.Tasks import sync_navigator, Task1_Weeding
+from IA_Robot.src.Scheduler.Scheduler import Scheduler, Worker
 from Messages.Messages import *
 
 
@@ -17,7 +17,8 @@ class ActionMsg(Messages):
         if scheduler is None:
             print "No Scheduler given, creating a new one"
             self.scheduler = Scheduler()
-        self.scheduler = scheduler
+        else:
+            self.scheduler = scheduler
         self.type_of_message(self)
 
     @staticmethod
@@ -28,17 +29,39 @@ class ActionMsg(Messages):
         return method(self)
 
     @staticmethod
-    def Initialisation(self):
-        command_initialise_navigation = Initialization(self.scheduler.navigationController)
-        command_initialise_weeding = Initialization(self.scheduler.weedingController)
+    def Initialize(self):
 
-        self.scheduler.store_command(command_initialise_navigation)
+        # Chercher l'arbre initialisation
+        tree = self.scheduler.actions_tree["Initialize"].getValue()
+        init_worker = Worker(tree, self.scheduler)
+        init_worker.start()
+        # DANS UN NOUVEAU THREAD: Retourner le meilleur chemin pour le navController dans une liste
+        # attention aux acces concurrents
+
+        # DANS UN NOUVEAU THREAD: Retourner le meilleur chemin pour le WeedingController dans une liste
+        # Pop la premiere Task et creer la commande "Tasks" pour chacune des listes, dans leur thread respectif.
+        command_initialise_weeding = sync_navigator(self.scheduler.weedingController)
         self.scheduler.store_command(command_initialise_weeding)
+        # faire executer la tache pour le receiver
+
+        self.scheduler.execute_commands()
+
+        # Once operations are executed, we retrieve the previous command, which will have been decorated with a Status
+        # We then, in the thread, analyse the status we have, and we decide which operation to do
+
 
     @staticmethod
     def Weeding(self):
-        pass
+        command_weeding_navigation = Task1_Weeding(self.scheduler.navigationController, self.scheduler.mapping)
 
-# TODO Add method to dynamically create tasks depending on the action (or linked list?)
+        # command_weeding_weeding = Task1_Weeding(weeding_controller)
+
+        self.scheduler.store_command(command_weeding_navigation)
+        # scheduler.store_command(command_weeding_weeding)
+
+        print("[Main] All commands executed")
+        # 4) Execute all commands in the dictionnary
+        self.scheduler.execute_commands()
+
 
 # Concrete Action class

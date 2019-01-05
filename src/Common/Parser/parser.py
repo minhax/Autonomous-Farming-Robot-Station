@@ -1,11 +1,11 @@
 from xml.dom import minidom
+
+from Machines.Robots import Robots
 from src.Serveur.IA_Serveur.src.Environment.Field import Field
 
 # parse an xml file by name
 # determine which type of xml we are loading
 # Using parser object, we can determine a specific behaviour for every type
-from src.Serveur.IA_Serveur.src.Machines.Robots import *
-from src.Serveur.IA_Serveur.src.Fleet.FleetManager import FleetManager
 
 
 class Parser(object):
@@ -31,7 +31,7 @@ class Parser(object):
     # In case we have a lettuce field, we retrieve information and create corresponding objects
     @staticmethod
     def lettuce_field(self):
-        # Create the field and set its attribute
+        # Create the field and set its _attribute
         self.obj = Field(self.dom)
 
     @staticmethod

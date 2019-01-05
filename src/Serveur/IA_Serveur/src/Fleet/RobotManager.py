@@ -1,11 +1,11 @@
 
-# Content: FleetManager
+# Content: RobotManager
 # Additional content: Scheduler class for Command Design Pattern#
 # Date : 12/07/2018
 # Purpose: Manager on Server side, controlling how many robots/drone are currently active
 
 
-class FleetManager:
+class RobotManager:
 
     # Class asking the command to carry out the request
     machines = {}
@@ -13,18 +13,19 @@ class FleetManager:
 
     @staticmethod
     def getInstance():
-        if FleetManager.__instance is None:
-            FleetManager()
-        return FleetManager.__instance
+        if RobotManager.__instance is None:
+            RobotManager()
+        return RobotManager.__instance
 
     def __init__(self):
-        if FleetManager.__instance is not None:
+        if RobotManager.__instance is not None:
             raise Exception(" This class is a Singleton")
         else:
-            FleetManager.__instance = self
+            RobotManager.__instance = self
 
-    def store_engine(self, machine, status):
-        self.machines[machine] = status
+    def store_engine(self, machine, IPAddress, port):
+        info = IPAddress + '::' + str(port)
+        self.machines[machine] = info
 
     def remove_engine(self, engine):
         self.machines.pop(engine, None)

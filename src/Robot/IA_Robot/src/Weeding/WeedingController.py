@@ -13,7 +13,7 @@ class WeedingController:
         self.computeRoboticArmInfos()
         # Decorate with status
         # Add policy
-        print ("Initialisation done for Weeding NavigationController")
+        print ("Initialisation done for Task1_Weeding NavigationController")
         #
         pass
 

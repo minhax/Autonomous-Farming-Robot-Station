@@ -22,21 +22,19 @@ int getPayload(int fd, uint8_t* buffer, uint16_t Length){
 	return read(fd, buffer, Length);
 }
 
-int sendRequest(int fd, uint16_t Code, uint16_t Length, uint8_t* buffer){
+int sendRequest(int fd, token_t* T, uint8_t* buffer){
 	
-	token_t T;
 
-	if(T.reqLength < 0 || T.reqLength > MAX_BUFFER_LEN)
+
+	if(T->reqLength < 0 || T->reqLength > MAX_BUFFER_LEN)
 		return SENDPAYLOAD_FAILED;
 
-	T.reqCode = Code;
-	T.reqLength = Length;
-	sendToken(fd,&T);
+	sendToken(fd,T);
 
-	if(T.reqLength == 0)
+	if(T->reqLength == 0)
 		return SUCCESS;
 
-	sendPayload(fd, buffer, Length);
+	sendPayload(fd, buffer, T->reqLength);
 	return SUCCESS;
 }
 

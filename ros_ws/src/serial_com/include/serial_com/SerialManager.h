@@ -6,29 +6,29 @@
 #include <string>
 #include <termios.h>
 #include <ros/ros.h>
-#include "custom_msgs/PlantBox.h"
+#include "custom_msgs/SerialPacket.h"
 
 
 class SerialManager{
 
 	int fd; //file descriptor to the socket
 	bool stopReading; //boolean used to stop reading because a write order has been received
-	bool SC_write_access; //boolean used for acknoledgement 
 	ros::NodeHandle N; //node handler
 	ros::Rate rate;
 
-	ros::Publisher reception;
-	ros::Subscribe envoi;
+	ros::Publisher recv_topic;
+	ros::Subscriber send_topic;
 
 	token_t tokenIn;
 	token_t tokenOut;
 	uint8_t bufferIn[MAX_BUFFER_LEN];
 	uint8_t bufferOut[MAX_BUFFER_LEN];
+	custom_msgs::SerialPacket serialPacketIn;
 
 	
 
 public:
-	SerialManager(std::string filename, int baudrate):stopReading(false),SC_write_access(false),N(),rate(1)
+	SerialManager(std::string filename, int baudrate):stopReading(false),N(),rate(1)
 	{
 		struct termios options;
 
@@ -39,13 +39,31 @@ public:
 
 		//update the timeout to set it to 1 second
 		tcgetattr (fd, &options);
-		options.c_cc [VTIME] = 10 ; //1 second timeout
+		options.c_cc [VTIME] = 1 ; //100 milliseconds timeout
 		tcsetattr (fd, TCSANOW, &options);
 
-		//create publisher and listener
-		reception = N.advertise<custom_msgs::PlantBox>("/recv", 20);
-		envoi = N.subscribe("my_topic", 1, callback);
+		//create publisher and subscriber
+		// topic on which incoming data will be written
+		recv_topic = N.advertise<custom_msgs::SerialPacket>("/com/serial/recv", 20);
+		// topic on which data to send must be written
+		send_topic = N.subscribe("/com/serial/send", 1, &SerialManager::callback,this);
 		
+	}
+
+
+	void callback(const custom_msgs::SerialPacket& packet){
+		tokenOut.reqCode = packet.Code;
+		tokenOut.reqCode = packet.Length;
+
+		if (packet.Length >0 && packet.Length<= MAX_BUFFER_LEN){
+			int indice = 0;
+			for(uint8_t i : packet.Buffer)
+				bufferOut[indice++] = i;				
+				//serialPacketIn.push_back(bufferIn[i]);
+				//std::memcpy(bufferOut,packet.Buffer,packet.Length);
+		}
+		// Callback is called in the same thread, if a read operation is being done, we must wait
+		stopReading = true;
 	}
 
 
@@ -58,7 +76,7 @@ public:
 		switch(Code){
 	
 		case SEND_COORDS:
-			memcpy(bp.bytes,buffer,Length);
+			std::memcpy(bp.bytes,buffer,Length);
 			printf("X = %d \nY = %d\nlength=%d\nwidth=%d\n",bp.box.x,bp.box.y,bp.box.length,bp.box.width);
 			break;
 		default:	
@@ -68,17 +86,7 @@ public:
 
 	}
 
-	void writeData(){
-
-		stopReading = true;
-		while(stopReadingACK == false);
-
-		/* insert sendRequest code */
-
-		stopReading = false;
-		
-
-	}
+	
 	
 	
 
@@ -88,17 +96,26 @@ public:
 		
 		while(ros::ok()) {
 
+			
 			if(stopReading==true){
-				while(SC_write_access==false);
 				sendRequest(fd,&tokenOut,bufferOut);
+				stopReading=false;
 			}
-				//stopReadingACK = true;
-			//while(stopReading==true);
-			//stopReadingACK = false;
+		
 
 			if(getRequest(fd,&tokenIn,bufferIn) == SUCCESS){
 				parseToken(&tokenIn);
-				handleRequest(&tokenIn,bufferIn);
+				serialPacketIn.Code = tokenIn.reqCode;
+				serialPacketIn.Length = tokenIn.reqLength;
+				//std::memcpy(serialPacketIn.Buffer,bufferIn,serialPacketIn.Length);
+				if (tokenIn.reqLength >0 && tokenIn.reqLength<= MAX_BUFFER_LEN){
+					for(uint8_t i = 0; i<tokenIn.reqLength; ++i)
+						serialPacketIn.Buffer[i] = bufferIn[i];
+				}
+				
+				
+					
+				//handleRequest(&tokenIn,bufferIn);
 			}
 			rate.sleep();
 		}

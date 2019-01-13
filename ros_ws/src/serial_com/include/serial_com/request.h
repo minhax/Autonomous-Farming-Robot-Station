@@ -65,7 +65,7 @@ int getPayload(int fd, uint8_t* buffer, uint16_t Length);
 
 // A request is a token_t and a data buffer
 // Function to handle high level request sending
-int sendRequest(int fd, uint16_t Code, uint16_t Length, uint8_t* buffer); 
+int sendRequest(int fd, token_t* T, uint8_t* buffer); 
 int getRequest(int fd, token_t* T, uint8_t* buffer);
 
 void parseToken(token_t* T);

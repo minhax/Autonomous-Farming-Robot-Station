@@ -65,20 +65,7 @@ int getRequest(int fd, token_t* T, uint8_t* buffer){
 	
 }
 
-int getRequest(int fd, request_t* R){
 
-	int availableBytes = 0;	
-	time_t t1 =time(NULL),t2=time(NULL);
-	while( (availableBytes < sizeof(request_t)) && (t2-t1 < 1)){
-		ioctl (fd, FIONREAD, &availableBytes );
-		t2=time(NULL);
-	}
-	if (read(fd, R, sizeof(request_t) == sizeof(request_t)))
-		return 0;
-	else 	
-		return 1;
-	
-}
 
 void parseToken(token_t* T){
 	printf("Request parsing\nRequest code : %u\nRequest data length : %u\n",T->reqCode, T->reqLength);

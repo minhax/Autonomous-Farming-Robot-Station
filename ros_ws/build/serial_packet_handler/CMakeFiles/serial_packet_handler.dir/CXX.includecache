@@ -49,6 +49,8 @@ custom_msgs/SerialRequest.h
 /home/pi/Documents/ros_ws/src/serial_packet_handler/include/serial_packet_handler/custom_msgs/SerialRequest.h
 custom_msgs/PlantBox.h
 /home/pi/Documents/ros_ws/src/serial_packet_handler/include/serial_packet_handler/custom_msgs/PlantBox.h
+ros/console.h
+-
 
 /home/pi/Documents/ros_ws/src/serial_packet_handler/include/serial_packet_handler/serial_request_codes.h
 

@@ -2,7 +2,8 @@
 #include <ros/ros.h>
 #include <serial_packet_handler/serial_request_codes.h>
 #include "custom_msgs/SerialRequest.h"
-#include "custom_msgs/PlantBox.h"
+#include "custom_msgs/PlantBox.h" 
+#include <ros/console.h>
 
 
 class SerialPacketHandler{
@@ -31,14 +32,24 @@ public:
 		uint16_t code = SEND_PLANT_BOX;
 		uint16_t length = 4*sizeof(uint32_t);	
 		uint32_t buffer[4];
+		uint8_t* bytes;
+
 		buffer[0] = msg.x;
 		buffer[1] = msg.y;
 		buffer[2] = msg.length;
 		buffer[3] = msg.width;
 		
+		bytes = (uint8_t*)buffer;
+
+		for(int i=0; i<length; ++i)
+			SerialRequestOut.Buffer[i] = bytes[i];
+		
+		
 		SerialRequestOut.Code = code;
 		SerialRequestOut.Length = length;
-		std::memcpy(&SerialRequestOut.Buffer[0], (uint8_t*)buffer, length);
+
+		
+		//std::memcpy(&SerialRequestOut.Buffer[0], (uint8_t*)buffer, length);
 		serial_pub.publish(SerialRequestOut);
 	}
 

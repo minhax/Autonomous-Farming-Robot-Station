@@ -38,14 +38,15 @@ int SerialManager::openSerial(std::string filename, int baudrate){
 
 
 void SerialManager::callback(const custom_msgs::SerialRequest& request){
+	//std::cout << "Dans le callback" <<std::endl; 
 	tokenOut.reqCode = request.Code;
-	tokenOut.reqCode = request.Length;
+	tokenOut.reqLength = request.Length;
 
 	if (request.Length >0 && request.Length<= MAX_BUFFER_LEN){
 		//return
 		int indice = 0;
-		for(uint8_t i : request.Buffer)
-			bufferOut[indice++] = i;				
+		for(indice = 0; indice<request.Length;  indice++)
+			bufferOut[indice] = request.Buffer[indice];				
 			//serialRequestIn.push_back(bufferIn[i]);
 			//std::memcpy(bufferOut,request.Buffer,request.Length);
 	}
@@ -65,6 +66,7 @@ void SerialManager::run(){
 
 		
 		if(stopReading==true){
+			//std::cout << "Ecrire requete" <<std::endl; 
 			sendRequest(fd,&tokenOut,bufferOut);
 			stopReading=false;
 		}
@@ -84,6 +86,7 @@ void SerialManager::run(){
 			serialFlush(fd);
 			//handleRequest(&tokenIn,bufferIn);
 		}
+		ros::spinOnce();
 		rate.sleep();
 	}
 }

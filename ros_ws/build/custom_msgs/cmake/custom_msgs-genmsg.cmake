@@ -22,9 +22,9 @@ add_custom_target(_custom_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "custom_msgs" "/home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg" ""
 )
 
-get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg" NAME_WE)
 add_custom_target(_custom_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "custom_msgs" "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "custom_msgs" "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg" ""
 )
 
 #
@@ -40,7 +40,7 @@ _generate_msg_cpp(custom_msgs
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/custom_msgs
 )
 _generate_msg_cpp(custom_msgs
-  "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg"
+  "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/custom_msgs
@@ -62,7 +62,7 @@ add_dependencies(custom_msgs_generate_messages custom_msgs_generate_messages_cpp
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_cpp _custom_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_cpp _custom_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -81,7 +81,7 @@ _generate_msg_eus(custom_msgs
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/custom_msgs
 )
 _generate_msg_eus(custom_msgs
-  "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg"
+  "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/custom_msgs
@@ -103,7 +103,7 @@ add_dependencies(custom_msgs_generate_messages custom_msgs_generate_messages_eus
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_eus _custom_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_eus _custom_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -122,7 +122,7 @@ _generate_msg_lisp(custom_msgs
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/custom_msgs
 )
 _generate_msg_lisp(custom_msgs
-  "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg"
+  "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/custom_msgs
@@ -144,7 +144,7 @@ add_dependencies(custom_msgs_generate_messages custom_msgs_generate_messages_lis
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_lisp _custom_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_lisp _custom_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -163,7 +163,7 @@ _generate_msg_nodejs(custom_msgs
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/custom_msgs
 )
 _generate_msg_nodejs(custom_msgs
-  "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg"
+  "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/custom_msgs
@@ -185,7 +185,7 @@ add_dependencies(custom_msgs_generate_messages custom_msgs_generate_messages_nod
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_nodejs _custom_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_nodejs _custom_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -204,7 +204,7 @@ _generate_msg_py(custom_msgs
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/custom_msgs
 )
 _generate_msg_py(custom_msgs
-  "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg"
+  "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/custom_msgs
@@ -226,7 +226,7 @@ add_dependencies(custom_msgs_generate_messages custom_msgs_generate_messages_py)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_py _custom_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg" NAME_WE)
+get_filename_component(_filename "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg" NAME_WE)
 add_dependencies(custom_msgs_generate_messages_py _custom_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

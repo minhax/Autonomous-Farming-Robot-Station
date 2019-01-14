@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/pi/Documents/ros_ws/build
 include custom_msgs/CMakeFiles/custom_msgs_generate_messages_py.dir/progress.make
 
 custom_msgs/CMakeFiles/custom_msgs_generate_messages_py: /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_PlantBox.py
-custom_msgs/CMakeFiles/custom_msgs_generate_messages_py: /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_SerialPacket.py
+custom_msgs/CMakeFiles/custom_msgs_generate_messages_py: /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_SerialRequest.py
 custom_msgs/CMakeFiles/custom_msgs_generate_messages_py: /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/__init__.py
 
 
@@ -63,20 +63,20 @@ custom_msgs/CMakeFiles/custom_msgs_generate_messages_py: /home/pi/Documents/ros_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG custom_msgs/PlantBox"
 	cd /home/pi/Documents/ros_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg -Icustom_msgs:/home/pi/Documents/ros_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p custom_msgs -o /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg
 
-/home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_SerialPacket.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
-/home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_SerialPacket.py: /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG custom_msgs/SerialPacket"
-	cd /home/pi/Documents/ros_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg -Icustom_msgs:/home/pi/Documents/ros_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p custom_msgs -o /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg
+/home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_SerialRequest.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_SerialRequest.py: /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG custom_msgs/SerialRequest"
+	cd /home/pi/Documents/ros_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg -Icustom_msgs:/home/pi/Documents/ros_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p custom_msgs -o /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg
 
 /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
 /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/__init__.py: /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_PlantBox.py
-/home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/__init__.py: /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_SerialPacket.py
+/home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/__init__.py: /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_SerialRequest.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for custom_msgs"
 	cd /home/pi/Documents/ros_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg --initpy
 
 custom_msgs_generate_messages_py: custom_msgs/CMakeFiles/custom_msgs_generate_messages_py
 custom_msgs_generate_messages_py: /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_PlantBox.py
-custom_msgs_generate_messages_py: /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_SerialPacket.py
+custom_msgs_generate_messages_py: /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/_SerialRequest.py
 custom_msgs_generate_messages_py: /home/pi/Documents/ros_ws/devel/lib/python2.7/dist-packages/custom_msgs/msg/__init__.py
 custom_msgs_generate_messages_py: custom_msgs/CMakeFiles/custom_msgs_generate_messages_py.dir/build.make
 

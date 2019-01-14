@@ -35,7 +35,7 @@ endif()
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/custom_msgs/msg" TYPE FILE FILES
     "/home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg"
-    "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg"
+    "/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg"
     )
 endif()
 

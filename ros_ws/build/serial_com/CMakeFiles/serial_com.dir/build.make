@@ -81,40 +81,66 @@ serial_com/CMakeFiles/serial_com.dir/src/serial_com.cpp.o.provides: serial_com/C
 serial_com/CMakeFiles/serial_com.dir/src/serial_com.cpp.o.provides.build: serial_com/CMakeFiles/serial_com.dir/src/serial_com.cpp.o
 
 
-serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o: serial_com/CMakeFiles/serial_com.dir/flags.make
-serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o: /home/pi/Documents/ros_ws/src/serial_com/src/request.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o"
-	cd /home/pi/Documents/ros_ws/build/serial_com && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial_com.dir/src/request.cpp.o -c /home/pi/Documents/ros_ws/src/serial_com/src/request.cpp
+serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o: serial_com/CMakeFiles/serial_com.dir/flags.make
+serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o: /home/pi/Documents/ros_ws/src/serial_com/src/serial_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o"
+	cd /home/pi/Documents/ros_ws/build/serial_com && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial_com.dir/src/serial_utils.cpp.o -c /home/pi/Documents/ros_ws/src/serial_com/src/serial_utils.cpp
 
-serial_com/CMakeFiles/serial_com.dir/src/request.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial_com.dir/src/request.cpp.i"
-	cd /home/pi/Documents/ros_ws/build/serial_com && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Documents/ros_ws/src/serial_com/src/request.cpp > CMakeFiles/serial_com.dir/src/request.cpp.i
+serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial_com.dir/src/serial_utils.cpp.i"
+	cd /home/pi/Documents/ros_ws/build/serial_com && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Documents/ros_ws/src/serial_com/src/serial_utils.cpp > CMakeFiles/serial_com.dir/src/serial_utils.cpp.i
 
-serial_com/CMakeFiles/serial_com.dir/src/request.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial_com.dir/src/request.cpp.s"
-	cd /home/pi/Documents/ros_ws/build/serial_com && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Documents/ros_ws/src/serial_com/src/request.cpp -o CMakeFiles/serial_com.dir/src/request.cpp.s
+serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial_com.dir/src/serial_utils.cpp.s"
+	cd /home/pi/Documents/ros_ws/build/serial_com && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Documents/ros_ws/src/serial_com/src/serial_utils.cpp -o CMakeFiles/serial_com.dir/src/serial_utils.cpp.s
 
-serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o.requires:
+serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o.requires:
 
-.PHONY : serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o.requires
+.PHONY : serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o.requires
 
-serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o.provides: serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o.requires
-	$(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o.provides.build
-.PHONY : serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o.provides
+serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o.provides: serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o.requires
+	$(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o.provides.build
+.PHONY : serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o.provides
 
-serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o.provides.build: serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o
+serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o.provides.build: serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o
+
+
+serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o: serial_com/CMakeFiles/serial_com.dir/flags.make
+serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o: /home/pi/Documents/ros_ws/src/serial_com/src/SerialManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o"
+	cd /home/pi/Documents/ros_ws/build/serial_com && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/serial_com.dir/src/SerialManager.cpp.o -c /home/pi/Documents/ros_ws/src/serial_com/src/SerialManager.cpp
+
+serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/serial_com.dir/src/SerialManager.cpp.i"
+	cd /home/pi/Documents/ros_ws/build/serial_com && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/Documents/ros_ws/src/serial_com/src/SerialManager.cpp > CMakeFiles/serial_com.dir/src/SerialManager.cpp.i
+
+serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/serial_com.dir/src/SerialManager.cpp.s"
+	cd /home/pi/Documents/ros_ws/build/serial_com && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/Documents/ros_ws/src/serial_com/src/SerialManager.cpp -o CMakeFiles/serial_com.dir/src/SerialManager.cpp.s
+
+serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o.requires:
+
+.PHONY : serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o.requires
+
+serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o.provides: serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o.requires
+	$(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o.provides.build
+.PHONY : serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o.provides
+
+serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o.provides.build: serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o
 
 
 # Object files for target serial_com
 serial_com_OBJECTS = \
 "CMakeFiles/serial_com.dir/src/serial_com.cpp.o" \
-"CMakeFiles/serial_com.dir/src/request.cpp.o"
+"CMakeFiles/serial_com.dir/src/serial_utils.cpp.o" \
+"CMakeFiles/serial_com.dir/src/SerialManager.cpp.o"
 
 # External object files for target serial_com
 serial_com_EXTERNAL_OBJECTS =
 
 /home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com: serial_com/CMakeFiles/serial_com.dir/src/serial_com.cpp.o
-/home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com: serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o
+/home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com: serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o
+/home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com: serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o
 /home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com: serial_com/CMakeFiles/serial_com.dir/build.make
 /home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com: /opt/ros/kinetic/lib/libroscpp.so
 /home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
@@ -136,7 +162,7 @@ serial_com_EXTERNAL_OBJECTS =
 /home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com: /usr/lib/arm-linux-gnueabihf/libpthread.so
 /home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so
 /home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com: serial_com/CMakeFiles/serial_com.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable /home/pi/Documents/ros_ws/devel/lib/serial_com/serial_com"
 	cd /home/pi/Documents/ros_ws/build/serial_com && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/serial_com.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -145,7 +171,8 @@ serial_com/CMakeFiles/serial_com.dir/build: /home/pi/Documents/ros_ws/devel/lib/
 .PHONY : serial_com/CMakeFiles/serial_com.dir/build
 
 serial_com/CMakeFiles/serial_com.dir/requires: serial_com/CMakeFiles/serial_com.dir/src/serial_com.cpp.o.requires
-serial_com/CMakeFiles/serial_com.dir/requires: serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o.requires
+serial_com/CMakeFiles/serial_com.dir/requires: serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o.requires
+serial_com/CMakeFiles/serial_com.dir/requires: serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o.requires
 
 .PHONY : serial_com/CMakeFiles/serial_com.dir/requires
 

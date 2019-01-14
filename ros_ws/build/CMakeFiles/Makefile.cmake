@@ -20,6 +20,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "custom_msgs/cmake/custom_msgs-genmsg.cmake"
   "serial_com/catkin_generated/ordered_paths.cmake"
   "serial_com/catkin_generated/package.cmake"
+  "serial_packet_handler/catkin_generated/ordered_paths.cmake"
+  "serial_packet_handler/catkin_generated/package.cmake"
   "/home/pi/Documents/ros_ws/devel/share/custom_msgs/cmake/custom_msgs-msg-extras.cmake"
   "/home/pi/Documents/ros_ws/devel/share/custom_msgs/cmake/custom_msgs-msg-paths.cmake"
   "/home/pi/Documents/ros_ws/devel/share/custom_msgs/cmake/custom_msgsConfig-version.cmake"
@@ -29,6 +31,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/pi/Documents/ros_ws/src/custom_msgs/package.xml"
   "/home/pi/Documents/ros_ws/src/serial_com/CMakeLists.txt"
   "/home/pi/Documents/ros_ws/src/serial_com/package.xml"
+  "/home/pi/Documents/ros_ws/src/serial_packet_handler/CMakeLists.txt"
+  "/home/pi/Documents/ros_ws/src/serial_packet_handler/package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/../package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/all.cmake"
   "/opt/ros/kinetic/share/catkin/cmake/assert.cmake"
@@ -194,6 +198,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "custom_msgs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "serial_com/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "serial_packet_handler/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -222,7 +227,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "custom_msgs/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake"
   "custom_msgs/CMakeFiles/custom_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "custom_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake"
-  "custom_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake"
   "custom_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/DependInfo.cmake"
   "custom_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake"
   "custom_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake"
@@ -231,10 +235,12 @@ set(CMAKE_DEPEND_INFO_FILES
   "custom_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "custom_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "custom_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
-  "custom_msgs/CMakeFiles/_custom_msgs_generate_messages_check_deps_SerialPacket.dir/DependInfo.cmake"
+  "custom_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake"
+  "custom_msgs/CMakeFiles/_custom_msgs_generate_messages_check_deps_SerialRequest.dir/DependInfo.cmake"
   "custom_msgs/CMakeFiles/custom_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "custom_msgs/CMakeFiles/custom_msgs_generate_messages.dir/DependInfo.cmake"
   "custom_msgs/CMakeFiles/custom_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "custom_msgs/CMakeFiles/custom_msgs_gencpp.dir/DependInfo.cmake"
   "serial_com/CMakeFiles/serial_com.dir/DependInfo.cmake"
+  "serial_packet_handler/CMakeFiles/serial_packet_handler.dir/DependInfo.cmake"
   )

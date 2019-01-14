@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg;/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg"
+messages_str = "/home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg;/home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg"
 services_str = ""
 pkg_name = "custom_msgs"
 dependencies_str = "std_msgs"

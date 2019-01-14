@@ -1,10 +1,10 @@
 
 "use strict";
 
+let SerialRequest = require('./SerialRequest.js');
 let PlantBox = require('./PlantBox.js');
-let SerialPacket = require('./SerialPacket.js');
 
 module.exports = {
+  SerialRequest: SerialRequest,
   PlantBox: PlantBox,
-  SerialPacket: SerialPacket,
 };

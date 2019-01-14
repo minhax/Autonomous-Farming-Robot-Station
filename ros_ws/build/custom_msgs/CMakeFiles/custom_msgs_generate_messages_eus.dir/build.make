@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/pi/Documents/ros_ws/build
 include custom_msgs/CMakeFiles/custom_msgs_generate_messages_eus.dir/progress.make
 
 custom_msgs/CMakeFiles/custom_msgs_generate_messages_eus: /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg/PlantBox.l
-custom_msgs/CMakeFiles/custom_msgs_generate_messages_eus: /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg/SerialPacket.l
+custom_msgs/CMakeFiles/custom_msgs_generate_messages_eus: /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg/SerialRequest.l
 custom_msgs/CMakeFiles/custom_msgs_generate_messages_eus: /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/manifest.l
 
 
@@ -63,10 +63,10 @@ custom_msgs/CMakeFiles/custom_msgs_generate_messages_eus: /home/pi/Documents/ros
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from custom_msgs/PlantBox.msg"
 	cd /home/pi/Documents/ros_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg -Icustom_msgs:/home/pi/Documents/ros_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p custom_msgs -o /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg
 
-/home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg/SerialPacket.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-/home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg/SerialPacket.l: /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from custom_msgs/SerialPacket.msg"
-	cd /home/pi/Documents/ros_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg -Icustom_msgs:/home/pi/Documents/ros_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p custom_msgs -o /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg
+/home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg/SerialRequest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg/SerialRequest.l: /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from custom_msgs/SerialRequest.msg"
+	cd /home/pi/Documents/ros_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg -Icustom_msgs:/home/pi/Documents/ros_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p custom_msgs -o /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg
 
 /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for custom_msgs"
@@ -74,7 +74,7 @@ custom_msgs/CMakeFiles/custom_msgs_generate_messages_eus: /home/pi/Documents/ros
 
 custom_msgs_generate_messages_eus: custom_msgs/CMakeFiles/custom_msgs_generate_messages_eus
 custom_msgs_generate_messages_eus: /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg/PlantBox.l
-custom_msgs_generate_messages_eus: /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg/SerialPacket.l
+custom_msgs_generate_messages_eus: /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/msg/SerialRequest.l
 custom_msgs_generate_messages_eus: /home/pi/Documents/ros_ws/devel/share/roseus/ros/custom_msgs/manifest.l
 custom_msgs_generate_messages_eus: custom_msgs/CMakeFiles/custom_msgs_generate_messages_eus.dir/build.make
 

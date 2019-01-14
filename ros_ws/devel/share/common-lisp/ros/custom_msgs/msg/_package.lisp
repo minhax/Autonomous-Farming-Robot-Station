@@ -3,7 +3,7 @@
   (:export
    "<PLANTBOX>"
    "PLANTBOX"
-   "<SERIALPACKET>"
-   "SERIALPACKET"
+   "<SERIALREQUEST>"
+   "SERIALREQUEST"
   ))
 

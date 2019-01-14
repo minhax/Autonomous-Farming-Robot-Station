@@ -7,3 +7,4 @@
 subdirs("gtest")
 subdirs("custom_msgs")
 subdirs("serial_com")
+subdirs("serial_packet_handler")

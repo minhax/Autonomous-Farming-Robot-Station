@@ -1,0 +1,8 @@
+prefix=/home/pi/Documents/ros_ws/install
+
+Name: serial_packet_handler
+Description: Description of serial_packet_handler
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pi/Documents/ros_ws/install/lib 
+Requires: 

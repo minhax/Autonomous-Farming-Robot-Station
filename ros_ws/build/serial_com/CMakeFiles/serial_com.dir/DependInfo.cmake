@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/Documents/ros_ws/src/serial_com/src/request.cpp" "/home/pi/Documents/ros_ws/build/serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o"
+  "/home/pi/Documents/ros_ws/src/serial_com/src/SerialManager.cpp" "/home/pi/Documents/ros_ws/build/serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o"
   "/home/pi/Documents/ros_ws/src/serial_com/src/serial_com.cpp" "/home/pi/Documents/ros_ws/build/serial_com/CMakeFiles/serial_com.dir/src/serial_com.cpp.o"
+  "/home/pi/Documents/ros_ws/src/serial_com/src/serial_utils.cpp" "/home/pi/Documents/ros_ws/build/serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

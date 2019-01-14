@@ -1,2 +1,2 @@
-custom_msgs:serial_com
+custom_msgs:serial_com:serial_packet_handler
 -DCATKIN_DEVEL_PREFIX=/home/pi/Documents/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pi/Documents/ros_ws/install -G Unix Makefiles

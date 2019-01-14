@@ -119,6 +119,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/pi/Documents/ros_ws/build/gtest/cmake_install.cmake")
   include("/home/pi/Documents/ros_ws/build/custom_msgs/cmake_install.cmake")
   include("/home/pi/Documents/ros_ws/build/serial_com/cmake_install.cmake")
+  include("/home/pi/Documents/ros_ws/build/serial_packet_handler/cmake_install.cmake")
 
 endif()
 

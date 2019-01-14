@@ -6,6 +6,6 @@
   :components ((:file "_package")
     (:file "PlantBox" :depends-on ("_package_PlantBox"))
     (:file "_package_PlantBox" :depends-on ("_package"))
-    (:file "SerialPacket" :depends-on ("_package_SerialPacket"))
-    (:file "_package_SerialPacket" :depends-on ("_package"))
+    (:file "SerialRequest" :depends-on ("_package_SerialRequest"))
+    (:file "_package_SerialRequest" :depends-on ("_package"))
   ))

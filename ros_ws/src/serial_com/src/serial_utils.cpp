@@ -1,4 +1,4 @@
-#include "serial_com/request.h"
+#include "serial_com/serial_utils.h"
 
 
 // ------------------------------------//
@@ -24,8 +24,6 @@ int getPayload(int fd, uint8_t* buffer, uint16_t Length){
 
 int sendRequest(int fd, token_t* T, uint8_t* buffer){
 	
-
-
 	if(T->reqLength < 0 || T->reqLength > MAX_BUFFER_LEN)
 		return SENDPAYLOAD_FAILED;
 
@@ -40,7 +38,8 @@ int sendRequest(int fd, token_t* T, uint8_t* buffer){
 
 int getRequest(int fd, token_t* T, uint8_t* buffer){
 
-	if (getToken(fd,T) ==-1)
+	int retcode = getToken(fd,T);
+	if ( (retcode == -1) || (retcode != sizeof(token_t)) )
 		return GETTOKEN_FAILED;
 
 	if(T->reqLength < 0 || T->reqLength > MAX_BUFFER_LEN)

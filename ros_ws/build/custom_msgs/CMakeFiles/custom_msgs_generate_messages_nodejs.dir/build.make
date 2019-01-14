@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/pi/Documents/ros_ws/build
 include custom_msgs/CMakeFiles/custom_msgs_generate_messages_nodejs.dir/progress.make
 
 custom_msgs/CMakeFiles/custom_msgs_generate_messages_nodejs: /home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg/PlantBox.js
-custom_msgs/CMakeFiles/custom_msgs_generate_messages_nodejs: /home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg/SerialPacket.js
+custom_msgs/CMakeFiles/custom_msgs_generate_messages_nodejs: /home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg/SerialRequest.js
 
 
 /home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg/PlantBox.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
@@ -62,14 +62,14 @@ custom_msgs/CMakeFiles/custom_msgs_generate_messages_nodejs: /home/pi/Documents/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from custom_msgs/PlantBox.msg"
 	cd /home/pi/Documents/ros_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/pi/Documents/ros_ws/src/custom_msgs/msg/PlantBox.msg -Icustom_msgs:/home/pi/Documents/ros_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p custom_msgs -o /home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg
 
-/home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg/SerialPacket.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg/SerialPacket.js: /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from custom_msgs/SerialPacket.msg"
-	cd /home/pi/Documents/ros_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialPacket.msg -Icustom_msgs:/home/pi/Documents/ros_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p custom_msgs -o /home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg
+/home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg/SerialRequest.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg/SerialRequest.js: /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/pi/Documents/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from custom_msgs/SerialRequest.msg"
+	cd /home/pi/Documents/ros_ws/build/custom_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/pi/Documents/ros_ws/src/custom_msgs/msg/SerialRequest.msg -Icustom_msgs:/home/pi/Documents/ros_ws/src/custom_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p custom_msgs -o /home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg
 
 custom_msgs_generate_messages_nodejs: custom_msgs/CMakeFiles/custom_msgs_generate_messages_nodejs
 custom_msgs_generate_messages_nodejs: /home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg/PlantBox.js
-custom_msgs_generate_messages_nodejs: /home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg/SerialPacket.js
+custom_msgs_generate_messages_nodejs: /home/pi/Documents/ros_ws/devel/share/gennodejs/ros/custom_msgs/msg/SerialRequest.js
 custom_msgs_generate_messages_nodejs: custom_msgs/CMakeFiles/custom_msgs_generate_messages_nodejs.dir/build.make
 
 .PHONY : custom_msgs_generate_messages_nodejs

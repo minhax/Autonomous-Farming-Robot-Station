@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/Documents/ros_ws/devel/include/custom_msgs/SerialPacket.h
+/home/pi/Documents/ros_ws/devel/include/custom_msgs/SerialRequest.h
 string
 -
 vector
@@ -23,7 +23,7 @@ ros/message_operations.h
 -
 
 /home/pi/Documents/ros_ws/src/serial_com/include/serial_com/SerialManager.h
-serial_com/request.h
+serial_com/serial_utils.h
 -
 wiringSerial.h
 -
@@ -35,10 +35,10 @@ termios.h
 -
 ros/ros.h
 -
-custom_msgs/SerialPacket.h
-/home/pi/Documents/ros_ws/src/serial_com/include/serial_com/custom_msgs/SerialPacket.h
+custom_msgs/SerialRequest.h
+/home/pi/Documents/ros_ws/src/serial_com/include/serial_com/custom_msgs/SerialRequest.h
 
-/home/pi/Documents/ros_ws/src/serial_com/include/serial_com/request.h
+/home/pi/Documents/ros_ws/src/serial_com/include/serial_com/serial_utils.h
 stdio.h
 -
 stdint.h
@@ -54,29 +54,17 @@ time.h
 sys/ioctl.h
 -
 
-/home/pi/Documents/ros_ws/src/serial_com/src/request.cpp
-serial_com/request.h
-/home/pi/Documents/ros_ws/src/serial_com/src/serial_com/request.h
+/home/pi/Documents/ros_ws/src/serial_com/src/SerialManager.cpp
+serial_com/SerialManager.h
+-
 
 /home/pi/Documents/ros_ws/src/serial_com/src/serial_com.cpp
-serial_com/request.h
-/home/pi/Documents/ros_ws/src/serial_com/src/serial_com/request.h
-ros/ros.h
--
-wiringSerial.h
--
-stdio.h
--
-stdlib.h
--
-string.h
--
-fcntl.h
--
-unistd.h
--
 serial_com/SerialManager.h
 /home/pi/Documents/ros_ws/src/serial_com/src/serial_com/SerialManager.h
+
+/home/pi/Documents/ros_ws/src/serial_com/src/serial_utils.cpp
+serial_com/serial_utils.h
+/home/pi/Documents/ros_ws/src/serial_com/src/serial_com/serial_utils.h
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h

@@ -478,19 +478,6 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named roscpp_generate_messages_cpp
-
-# Build rule for target.
-roscpp_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f custom_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make custom_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-#=============================================================================
 # Target rules for targets named roscpp_generate_messages_eus
 
 # Build rule for target.
@@ -595,17 +582,30 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named _custom_msgs_generate_messages_check_deps_SerialPacket
+# Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
-_custom_msgs_generate_messages_check_deps_SerialPacket: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _custom_msgs_generate_messages_check_deps_SerialPacket
-.PHONY : _custom_msgs_generate_messages_check_deps_SerialPacket
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
 
 # fast build rule for target.
-_custom_msgs_generate_messages_check_deps_SerialPacket/fast:
-	$(MAKE) -f custom_msgs/CMakeFiles/_custom_msgs_generate_messages_check_deps_SerialPacket.dir/build.make custom_msgs/CMakeFiles/_custom_msgs_generate_messages_check_deps_SerialPacket.dir/build
-.PHONY : _custom_msgs_generate_messages_check_deps_SerialPacket/fast
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f custom_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make custom_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _custom_msgs_generate_messages_check_deps_SerialRequest
+
+# Build rule for target.
+_custom_msgs_generate_messages_check_deps_SerialRequest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _custom_msgs_generate_messages_check_deps_SerialRequest
+.PHONY : _custom_msgs_generate_messages_check_deps_SerialRequest
+
+# fast build rule for target.
+_custom_msgs_generate_messages_check_deps_SerialRequest/fast:
+	$(MAKE) -f custom_msgs/CMakeFiles/_custom_msgs_generate_messages_check_deps_SerialRequest.dir/build.make custom_msgs/CMakeFiles/_custom_msgs_generate_messages_check_deps_SerialRequest.dir/build
+.PHONY : _custom_msgs_generate_messages_check_deps_SerialRequest/fast
 
 #=============================================================================
 # Target rules for targets named custom_msgs_generate_messages_cpp
@@ -672,6 +672,19 @@ serial_com/fast:
 	$(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/build
 .PHONY : serial_com/fast
 
+#=============================================================================
+# Target rules for targets named serial_packet_handler
+
+# Build rule for target.
+serial_packet_handler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 serial_packet_handler
+.PHONY : serial_packet_handler
+
+# fast build rule for target.
+serial_packet_handler/fast:
+	$(MAKE) -f serial_packet_handler/CMakeFiles/serial_packet_handler.dir/build.make serial_packet_handler/CMakeFiles/serial_packet_handler.dir/build
+.PHONY : serial_packet_handler/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -709,7 +722,6 @@ help:
 	@echo "... roscpp_generate_messages_py"
 	@echo "... custom_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_eus"
@@ -718,12 +730,14 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... _custom_msgs_generate_messages_check_deps_SerialPacket"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... _custom_msgs_generate_messages_check_deps_SerialRequest"
 	@echo "... custom_msgs_generate_messages_cpp"
 	@echo "... custom_msgs_generate_messages"
 	@echo "... custom_msgs_generate_messages_eus"
 	@echo "... custom_msgs_gencpp"
 	@echo "... serial_com"
+	@echo "... serial_packet_handler"
 .PHONY : help
 
 

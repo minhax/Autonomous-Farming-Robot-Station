@@ -1,0 +1,4 @@
+<launch>
+  <node name="serial_com_node" pkg="serial_com" type="serial_com" />
+  <node name="serial_packet_handler_node" pkg="serial_packet_handler" type="serial_packet_handler" />
+</launch>

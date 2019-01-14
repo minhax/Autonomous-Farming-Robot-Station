@@ -180,32 +180,32 @@ serial_com/fast:
 	cd /home/pi/Documents/ros_ws/build && $(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/build
 .PHONY : serial_com/fast
 
-src/request.o: src/request.cpp.o
+src/SerialManager.o: src/SerialManager.cpp.o
 
-.PHONY : src/request.o
+.PHONY : src/SerialManager.o
 
 # target to build an object file
-src/request.cpp.o:
-	cd /home/pi/Documents/ros_ws/build && $(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/request.cpp.o
-.PHONY : src/request.cpp.o
+src/SerialManager.cpp.o:
+	cd /home/pi/Documents/ros_ws/build && $(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.o
+.PHONY : src/SerialManager.cpp.o
 
-src/request.i: src/request.cpp.i
+src/SerialManager.i: src/SerialManager.cpp.i
 
-.PHONY : src/request.i
+.PHONY : src/SerialManager.i
 
 # target to preprocess a source file
-src/request.cpp.i:
-	cd /home/pi/Documents/ros_ws/build && $(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/request.cpp.i
-.PHONY : src/request.cpp.i
+src/SerialManager.cpp.i:
+	cd /home/pi/Documents/ros_ws/build && $(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.i
+.PHONY : src/SerialManager.cpp.i
 
-src/request.s: src/request.cpp.s
+src/SerialManager.s: src/SerialManager.cpp.s
 
-.PHONY : src/request.s
+.PHONY : src/SerialManager.s
 
 # target to generate assembly for a file
-src/request.cpp.s:
-	cd /home/pi/Documents/ros_ws/build && $(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/request.cpp.s
-.PHONY : src/request.cpp.s
+src/SerialManager.cpp.s:
+	cd /home/pi/Documents/ros_ws/build && $(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/SerialManager.cpp.s
+.PHONY : src/SerialManager.cpp.s
 
 src/serial_com.o: src/serial_com.cpp.o
 
@@ -234,6 +234,33 @@ src/serial_com.cpp.s:
 	cd /home/pi/Documents/ros_ws/build && $(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/serial_com.cpp.s
 .PHONY : src/serial_com.cpp.s
 
+src/serial_utils.o: src/serial_utils.cpp.o
+
+.PHONY : src/serial_utils.o
+
+# target to build an object file
+src/serial_utils.cpp.o:
+	cd /home/pi/Documents/ros_ws/build && $(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.o
+.PHONY : src/serial_utils.cpp.o
+
+src/serial_utils.i: src/serial_utils.cpp.i
+
+.PHONY : src/serial_utils.i
+
+# target to preprocess a source file
+src/serial_utils.cpp.i:
+	cd /home/pi/Documents/ros_ws/build && $(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.i
+.PHONY : src/serial_utils.cpp.i
+
+src/serial_utils.s: src/serial_utils.cpp.s
+
+.PHONY : src/serial_utils.s
+
+# target to generate assembly for a file
+src/serial_utils.cpp.s:
+	cd /home/pi/Documents/ros_ws/build && $(MAKE) -f serial_com/CMakeFiles/serial_com.dir/build.make serial_com/CMakeFiles/serial_com.dir/src/serial_utils.cpp.s
+.PHONY : src/serial_utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -248,12 +275,15 @@ help:
 	@echo "... install/strip"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... src/request.o"
-	@echo "... src/request.i"
-	@echo "... src/request.s"
+	@echo "... src/SerialManager.o"
+	@echo "... src/SerialManager.i"
+	@echo "... src/SerialManager.s"
 	@echo "... src/serial_com.o"
 	@echo "... src/serial_com.i"
 	@echo "... src/serial_com.s"
+	@echo "... src/serial_utils.o"
+	@echo "... src/serial_utils.i"
+	@echo "... src/serial_utils.s"
 .PHONY : help
 
 

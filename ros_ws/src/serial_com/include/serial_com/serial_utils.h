@@ -7,7 +7,7 @@
 #include <time.h>
 #include <sys/ioctl.h>
 
-#define MAX_BUFFER_LEN 64
+#define MAX_BUFFER_LEN 		32
 
 //errors 
 #define SUCCESS 		0
@@ -17,10 +17,9 @@
 #define GETTOKEN_FAILED 	2
 #define GETPAYLOAD_FAILED	3
 
-#define TIMEOUT_GET 		 2 //2 seconds timeout on get payload to avoid being stuck
+#define TIMEOUT_GET 		 1 //2 seconds timeout on get payload to avoid being stuck
 
-//request Codes 
-#define SEND_COORDS		1
+
 
 //Peut être remplacé par __attribute__((__packed__))
 #pragma pack(1)
@@ -31,31 +30,13 @@ struct token{
 } token_t;
 #pragma pack(0)
 
-
-
 #pragma pack(1)
-typedef
-struct box{
-	uint32_t x;
-	uint32_t y;
-	uint32_t length;
-	uint32_t width;
-} box_t;
+typedef 
+struct request{
+	token_t Token;
+	uint8_t Buffer[MAX_BUFFER_LEN];
+} request_t;
 #pragma pack(0)
-
-
-
-#pragma pack(1)
-typedef
-union box_payload{
-	box_t box;
-	uint8_t bytes[sizeof(box_t)];
-} box_payload_t;
-#pragma pack(0)
-
-
-
-
 
 // Functions to handle IO operations
 int sendToken(int fd, token_t* T);

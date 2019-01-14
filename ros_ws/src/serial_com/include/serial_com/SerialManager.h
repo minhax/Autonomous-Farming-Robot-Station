@@ -23,6 +23,9 @@ class SerialManager{
 	token_t tokenOut;
 	uint8_t bufferIn[MAX_BUFFER_LEN];
 	uint8_t bufferOut[MAX_BUFFER_LEN];
+
+
+	
 	custom_msgs::SerialRequest serialRequestIn;
 
 

@@ -36,6 +36,8 @@ int sendRequest(int fd, token_t* T, uint8_t* buffer){
 	return SUCCESS;
 }
 
+
+
 int getRequest(int fd, token_t* T, uint8_t* buffer){
 
 	int retcode = getToken(fd,T);
@@ -60,6 +62,21 @@ int getRequest(int fd, token_t* T, uint8_t* buffer){
 	}
 
 	return GETPAYLOAD_FAILED;
+	
+}
+
+int getRequest(int fd, request_t* R){
+
+	int availableBytes = 0;	
+	time_t t1 =time(NULL),t2=time(NULL);
+	while( (availableBytes < sizeof(request_t)) && (t2-t1 < 1)){
+		ioctl (fd, FIONREAD, &availableBytes );
+		t2=time(NULL);
+	}
+	if (read(fd, R, sizeof(request_t) == sizeof(request_t)))
+		return 0;
+	else 	
+		return 1;
 	
 }
 

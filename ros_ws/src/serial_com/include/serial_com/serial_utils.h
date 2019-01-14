@@ -7,7 +7,7 @@
 #include <time.h>
 #include <sys/ioctl.h>
 
-#define MAX_BUFFER_LEN 		32
+#define MAX_BUFFER_LEN 		64
 
 //errors 
 #define SUCCESS 		0
@@ -48,6 +48,9 @@ int getPayload(int fd, uint8_t* buffer, uint16_t Length);
 // Function to handle high level request sending
 int sendRequest(int fd, token_t* T, uint8_t* buffer); 
 int getRequest(int fd, token_t* T, uint8_t* buffer);
+
+//int sendRequest(int fd, request_t* T); 
+//int getRequest(int fd, request_t* T); 
 
 void parseToken(token_t* T);
 void hexdumpRequest(token_t* T);

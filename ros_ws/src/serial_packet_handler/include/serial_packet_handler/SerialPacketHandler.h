@@ -18,7 +18,6 @@ class SerialPacketHandler{
 
 	ros::NodeHandle N;
 
-	uint8_t buffer[64];
 
 public:
 
@@ -29,7 +28,18 @@ public:
 	}
 
 	void SerialRequestSender(const custom_msgs::PlantBox& msg){
-
+		uint16_t code = SEND_PLANT_BOX;
+		uint16_t length = 4*sizeof(uint32_t);	
+		uint32_t buffer[4];
+		buffer[0] = msg.x;
+		buffer[1] = msg.y;
+		buffer[2] = msg.length;
+		buffer[3] = msg.width;
+		
+		SerialRequestOut.Code = code;
+		SerialRequestOut.Length = length;
+		std::memcpy(&SerialRequestOut.Buffer[0], (uint8_t*)buffer, length);
+		serial_pub.publish(SerialRequestOut);
 	}
 
 
@@ -41,6 +51,7 @@ public:
 		switch(msg.Code){
 
 		case SEND_PLANT_BOX:
+			// Here replace 64 by the MAX_BUFFER_LEN macro
 			if (length > 0 && length <= 64){
 
 
@@ -50,13 +61,6 @@ public:
 				PlantBoxIn.length = valPtr[2];
 				PlantBoxIn.width = valPtr[3];
 				
-				uint64_t t = *((uint64_t*)(valPtr+4));
-
-				struct timeval tv;
-				gettimeofday(&tv,NULL);
-				uint64_t now = 1000000 * tv.tv_sec + tv.tv_usec;
-				
-				std::cout<<"then : "<<t<<std::endl<<"now : "<<now<<std::endl;
 	
 				plant_pub.publish(PlantBoxIn);
 

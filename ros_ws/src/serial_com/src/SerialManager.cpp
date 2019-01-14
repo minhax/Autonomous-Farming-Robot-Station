@@ -1,7 +1,7 @@
 #include <serial_com/SerialManager.h>
 
 
-SerialManager::SerialManager(std::string filename, int baudrate):stopReading(false),N(),rate(1)
+SerialManager::SerialManager(std::string filename, int baudrate):stopReading(false),N(),rate(10)
 {
 	
 	fd = openSerial(filename,baudrate);
@@ -87,6 +87,4 @@ void SerialManager::run(){
 		rate.sleep();
 	}
 }
-
-
 

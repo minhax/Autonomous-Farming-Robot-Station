@@ -1,9 +1,10 @@
 from anytree import Node
 
-SERVER_URL = "192.168.14.1:8080/mapping.html"
+SERVER_URL = "C:/Users/minh1/OneDrive/Bureau/Minh/Projets/Enjambeur_Agricole/Enjambeur_Agricole/web/field1.html"
 SERVER_IP_ADDRESS = "192.168.14.1"
 SERVER_DEFAULT_PORT = 1111
 CLIENT_DEFAULT_PORT = 1112
+
 
 action = Node("Initialize", type="Initialize")
 task1_navController = Node("sync_navigator", type="Success", parent=action)

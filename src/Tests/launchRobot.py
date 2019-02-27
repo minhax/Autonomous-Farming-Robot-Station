@@ -1,5 +1,4 @@
 # Messages exchange test
-from Messages.Robot_Msg.ConfigMsg import ConfigMsg
 from src.Robot.IA_Robot.src.Scheduler.Scheduler import *
 from src.Robot.Navigation_Robot.src.Navigation.NavigationController import *
 from Common.Parser.parser import Parser

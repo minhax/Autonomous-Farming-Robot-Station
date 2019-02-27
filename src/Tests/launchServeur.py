@@ -2,7 +2,6 @@
 
 from Parser.parser import Parser
 from src.Serveur.IA_Serveur.src.Mapping.Mapping import Mapping
-from Messages.Serveur_Msg.ActionMsg import *
 from Messages.Serveur_Msg.MappingMsg import *
 from CommunicationManager.Server.Server_CommunicationManager import *
 # Start thread is initializing Server components, and then create WebSocket Server and Socket servers.
@@ -16,11 +15,14 @@ def start():
     parser = Parser('../Common/Parser/files/field.xml')
 
     mapping = Mapping(parser.obj)
+    headers = {'content-type': 'field initialisation'}
+    Server_CommunicationManager.send_data_to_webserver(mapping, headers)
 
     # 2) Initiate components : Robot_CommunicationManager, websocket
     # 3)Launch WebSocket and send the field Mapping
     # Through WebSocket, User can decide to add more machines or not. If so, we increment local port, and open a new socket_server
     com_manager = Server_CommunicationManager.getInstance()
+
 
     print ("# ------ End of initialisation ------ #")
     print ("# ------ Server Part2: sync_navigator information exchange  ------ #")

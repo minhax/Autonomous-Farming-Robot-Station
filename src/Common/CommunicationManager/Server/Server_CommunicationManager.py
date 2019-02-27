@@ -1,14 +1,11 @@
 
-from src.Common import constant as const
-from src.Common.Network.Serveur import *
-from Common.Network.Client import *
 from CommunicationManager.CommunicationManager import *
+import requests
 
 
 class Server_CommunicationManager(CommunicationManager):
 
     machines = {}
-    websocket = None
     socketservers = {}
     __instance = None
 
@@ -43,4 +40,12 @@ class Server_CommunicationManager(CommunicationManager):
         robotx1_client = Client(robot_info[0], robot_info[1], message)
         robotx1_client.start()
 
+    @staticmethod
+    def send_data_to_webserver(data, headers=None):
+        r = requests.post('', data=json.dumps(data), headers=headers)
 
+    @staticmethod
+    def get_data_from_webserver():
+        r = requests.get('https://api.github.com/events')
+        r.json()
+        r.status_code

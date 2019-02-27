@@ -33,13 +33,11 @@ class ActionMsg(Messages):
 
         # Chercher l'arbre initialisation
         tree = self.scheduler.actions_tree["Initialize"].getValue()
+
+        # Retourner le nombre de premier fils de premier etage qu'on a , et lancer un worker par fils
         init_worker = Worker(tree, self.scheduler)
         init_worker.start()
-        # DANS UN NOUVEAU THREAD: Retourner le meilleur chemin pour le navController dans une liste
-        # attention aux acces concurrents
 
-        # DANS UN NOUVEAU THREAD: Retourner le meilleur chemin pour le WeedingController dans une liste
-        # Pop la premiere Task et creer la commande "Tasks" pour chacune des listes, dans leur thread respectif.
         command_initialise_weeding = sync_navigator(self.scheduler.weedingController)
         self.scheduler.store_command(command_initialise_weeding)
         # faire executer la tache pour le receiver

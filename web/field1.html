@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>Field 1</title>
+            <meta name="Minh Nguyen" content="Field mapping">
+            <script src="mapping.js"></script>
+            <script src="classes.js"></script>
+            <script src="functions.js"></script>
+            <noscript>Sorry, your browser does not support JavaScript!</noscript>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <style>
+              /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+              .row.content {height: 1500px}
+
+              /* Set gray background color and 100% height */
+              .sidenav {
+                background-color: #f1f1f1;
+                height: 100%;
+              }
+
+              /* Set black background color, white text and some padding */
+              footer {
+                background-color: #555;
+                color: white;
+                padding: 15px;
+              }
+
+              /* On small screens, set height to 'auto' for sidenav and grid */
+              @media screen and (max-width: 767px) {
+                .sidenav {
+                  height: auto;
+                  padding: 15px;
+                }
+                .row.content {height: auto;}
+              }
+              .parallelogram {
+                	width: 800px;
+                	height: 400px;
+                	transform: skew(-10deg);
+                	background: #fff;
+                  border-style: solid;
+                  border-width: 1px;
+                }
+            </style>
+      </head>
+      <body>
+            <div class="container-fluid">
+                  <div class="row content">
+                        <div class="col-sm-3 sidenav" id="robotList">
+                                <h4>Robot's list</h4>
+                                <ul class="nav nav-pills nav-stacked">
+                                  <li class="active"><a href="#section1">Robot 1</a></li>
+                                  <li><a href="#section2">Robot 2</a></li>
+                                  <li><a href="#section3">Robot 3</a></li>
+                                  <li><a href="#section3">Robot 4</a></li>
+                                </ul><br>
+                        </div>
+                        <div class="col-sm-9">
+                                <h1><big>Mapping</big></h1>
+                                <hr>
+                                <h5><span class="glyphicon glyphicon-time" id="timeUTC" ></span></h5>
+                                  <div class="parallelogram" id="fieldParallelogram"></div>
+                                <br><br>
+
+                                <div class="container-fluid" id ="robotInfoDisplay">
+                                      <h2> Robot information </h2>
+                                      <table class="table" id="robotTable">
+                                        <thead>
+                                      <tr>
+                                        <th>UUID</th>
+                                        <th>Status</th>
+                                        <th>Position</th>
+                                        <th>Initialize</th>
+                                      </tr>
+                                        </thead>
+                                      <tbody>
+                                        <tr class="success">
+                                          <td>X25302</td>
+                                          <td>Active</td>
+                                          <td>X:45 Y:52</td>
+                                          <td>
+                                              <button type="button" class="btn btn-primary active" onclick="">Initialize</button>
+                                              <button type="button" class="btn btn-primary disabled">Work</button>
+                                              <button type="button" class="btn btn-primary disabled">Stop</button>
+                                          </td>
+                                        </tr>
+
+                                        <tr class="Danger">
+                                          <td id="robot1">Y5842</td>
+                                          <td>Inactive</td>
+                                          <td>X:54 Y: 23</td>
+                                          <td>
+                                              <button type="button" class="btn btn-primary active" onclick="sendInformation(document.getElementById(robot1))">Initialize</button>
+                                              <button type="button" class="btn btn-primary disabled">Work</button>
+                                              <button type="button" class="btn btn-primary disabled">Stop</button>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                      </table>
+                                  </div>
+                              </div>
+                        </div>
+
+            </div>
+
+            <div class="container">
+                <div class="jumbotron">
+                      <h1>Emergency stop</h1>
+                      <p>Human action required</p>
+                </div>
+            </div>
+            <script>
+                var today = new Date();
+                var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                var dateTime = date+' '+time;
+                document.getElementById("timeUTC").innerHTML = dateTime;
+            </script>
+      </body>
+</html>

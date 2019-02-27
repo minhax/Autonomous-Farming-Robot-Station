@@ -1,22 +1,21 @@
-import abc
 from anytree import Node, RenderTree, LevelOrderIter
-# Content: Scheduler AI
-# Additional content: Scheduler class for Command Design Pattern#
+# Content: Robot Scheduler AI
+# Purpose: Scheduler located on the Robot. Communicates w/ the Server. Receives Actions (Initiate, Work, Stop ..).
+# Depending on the Action, gives the corresponding Task to execute in its tree structure
 # Date : 12/07/2018
-from Commands.Status import Status
+
 from src.Common import constant as const
 from Commands.Tasks import *
+import threading
 
 
 class Scheduler:
-
     # Class must contain a reference to different objects he'll be interacting with : WeedingController, Navigation Manager
     # Class asking the command to carry out the request
     # Scheduler is in charge of connection to the serveur
     navigationController = None
     weedingController = None
     actions_tree = {"Initialize": RenderTree(const.action)}
-
 
     def __init__(self, navigation=None, weeding=None):
         # TODO : Remplacer par une liste chainee qui pop le premier element
@@ -32,8 +31,7 @@ class Scheduler:
         for command in self._commands:
             command.execute()
 
-    def isworking(self, component, task):
-
+    def isworking(self, task):
         # In the future, we have to check some caracteristics about components. Then we can decide if they are fine or not
         status = Status("IsWorking")
         try:
@@ -45,12 +43,6 @@ class Scheduler:
         # Add @status to @task
         task.status = status
         return task
-
-# coding: utf-8
-
-import socket
-import threading
-
 
 class Worker(threading.Thread):
 
@@ -86,7 +78,8 @@ class Worker(threading.Thread):
         return task, nlist[0]
 
     def run(self):
-        message = "Initiate"
+        first_task = self.create_task(self, "sn") # give the first node
+        first_task = self.scheduler.isworking(self.scheduler.navigationController, first_task)
         tree = self.render_tree
         while True:
             if message == "Empty":

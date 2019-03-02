@@ -16,7 +16,9 @@ def start():
 
     mapping = Mapping(parser.obj)
     headers = {'content-type': 'field initialisation'}
-    Server_CommunicationManager.send_data_to_webserver(mapping, headers)
+
+    # ------ Web server not working atm ------- #
+    # Server_CommunicationManager.send_data_to_webserver(mapping, headers)
 
     # 2) Initiate components : Robot_CommunicationManager, websocket
     # 3)Launch WebSocket and send the field Mapping

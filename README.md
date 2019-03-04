@@ -46,7 +46,7 @@ V4 - Déploiement en grandeur nature
 
 ## Architecture générale <a id="Archi G"></a>
 
-![Architecture](docs\img\CoeurArchi.jpg)
+![Architecture](https://gitlab.utc.fr/nguyminh/Enjambeur_Agricole/blob/dev/docs/img/CoeurArchi.jpg)
 
 Le Framework est décomposé sous forme de noeuds indépendants.
 On distingue 2 entités physiques différentes:
@@ -57,22 +57,22 @@ Ce coeur d'architecture présente la possibilité d'ajouter facilement des modul
 
 Lors d'une action du robot, il faut prendre en compte le guidage automatique du véhicule, ainsi que la mise en oeuvre automatique des actions. Pour cela, différents modules sont activés.
 
-![Infrastructure logicielle pour la mise en oeuvre automatique des actions](docs\img\AIF.jpg)
+![Infrastructure logicielle pour la mise en oeuvre automatique des actions](https://gitlab.utc.fr/nguyminh/Enjambeur_Agricole/blob/dev/docs/img/AIF.jpg)
 
 
-![Infrastructure logicielle pour la mise en oeuvre automatique des actions](docs\img\AVG.jpg)
+![Infrastructure logicielle pour la mise en oeuvre automatique des actions](https://gitlab.utc.fr/nguyminh/Enjambeur_Agricole/blob/dev/docs/img/AVG.jpg)
 
 
 ## Architecture matérielle <a id="Archi M"></a>
 
-![](docs\img\Archi_Generale_Lora.jpg)
+![Architecture Générale](https://gitlab.utc.fr/nguyminh/Enjambeur_Agricole/blob/dev/docs/img/Archi_Generale_Lora.jpg)
 
 ## Architecture Logicielle <a id="Archi L"></a>
 
 ## Outputs <a id="Outputs"></a>
 
 ### IHM
-![IHM](docs\img\front.PNG)
+![IHM](https://gitlab.utc.fr/nguyminh/Enjambeur_Agricole/blob/dev/docs/img/front.PNG)
 
 ## Lancement <a id="Lancement"></a>
 

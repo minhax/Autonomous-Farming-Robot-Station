@@ -3,6 +3,7 @@
 # Etat actuel du projet
 
 V0 - Faite 
+
 V1 - En cours
 
 Projet en suspens
@@ -65,7 +66,7 @@ Ce coeur d'architecture présente la possibilité d'ajouter facilement des modul
 
 ## Architecture matérielle <a id="Archi M"></a>
 
-(![Architecture Générale](docs/img/Archi_Generale_Lora.jpg))
+![Architecture Générale](docs/img/Archi_Generale_Lora.jpg)
 
 ## Architecture Logicielle <a id="Archi L"></a>
 

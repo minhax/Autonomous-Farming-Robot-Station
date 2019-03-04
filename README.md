@@ -1,12 +1,19 @@
 # Enjambeur_Agricole
 
+# Etat actuel du projet
+
+V0 - Faite 
+V1 - En cours
+
+Projet en suspens
+
 # Sommaire
 
 I. [Introduction](#Introduction)
 
 II. [Objectifs du projet](#Objectifs)
 
-III. [Architecture générale](#Archi G)
+III. [Architecture générale](#ArchiG)
 
 IV. [Architecture Matérielle](#Archi M)
 
@@ -34,19 +41,19 @@ De plus, il est demandé aux robots de recueillir de l'information à l'aide de 
 Le projet a pour objectif de proposer une architecture matérielle et logicielle à destination d'un ensemble de robots.
 Le projet se divise en plusieurs étapes:
 
-V0 - Analyse de l'environnement, étude des technologies et architecture à mettre en place
+**V0** - Analyse de l'environnement, étude des technologies et architecture à mettre en place
 
-V1 - Réalisation d'un simulateur en python avec communication simultanée entre un serveur et plusieurs robots
+**V1** - Réalisation d'un simulateur en python avec communication simultanée entre un serveur et plusieurs robots
 
-V2 - Intégration de l'architecture soft et des API des différents capteurs
+**V2** - Intégration de l'architecture soft et des API des différents capteurs
 
-V3 - Migration sous ROS
+**V3** - Migration sous ROS
 
-V4 - Déploiement en grandeur nature
+**V4** - Déploiement en grandeur nature
 
-## Architecture générale <a id="Archi G"></a>
+## Architecture générale <a id="ArchiG"></a>
 
-![Architecture](https://gitlab.utc.fr/nguyminh/Enjambeur_Agricole/blob/dev/docs/img/CoeurArchi.jpg)
+![Architecture](docs/img/CoeurArchi.jpg)
 
 Le Framework est décomposé sous forme de noeuds indépendants.
 On distingue 2 entités physiques différentes:
@@ -55,30 +62,36 @@ On distingue 2 entités physiques différentes:
 
 Ce coeur d'architecture présente la possibilité d'ajouter facilement des modules indépendants, ce qui est important notamment pour le rajout de capteurs par la suite.
 
-Lors d'une action du robot, il faut prendre en compte le guidage automatique du véhicule, ainsi que la mise en oeuvre automatique des actions. Pour cela, différents modules sont activés.
-
-![Infrastructure logicielle pour la mise en oeuvre automatique des actions](https://gitlab.utc.fr/nguyminh/Enjambeur_Agricole/blob/dev/docs/img/AIF.jpg)
-
-
-![Infrastructure logicielle pour la mise en oeuvre automatique des actions](https://gitlab.utc.fr/nguyminh/Enjambeur_Agricole/blob/dev/docs/img/AVG.jpg)
-
 
 ## Architecture matérielle <a id="Archi M"></a>
 
-![Architecture Générale](https://gitlab.utc.fr/nguyminh/Enjambeur_Agricole/blob/dev/docs/img/Archi_Generale_Lora.jpg)
+(![Architecture Générale](docs/img/Archi_Generale_Lora.jpg))
 
 ## Architecture Logicielle <a id="Archi L"></a>
 
+Lors d'une action du robot, il faut prendre en compte le guidage autonome du véhicule, ainsi que la mise en oeuvre automatique des actions. Pour cela, différents modules sont activés.
+
+
+### Infrastructure logicielle pour le guidage autonome
+
+![Infrastructure logicielle pour le guidage autonome](docs/img/AVG.jpg)
+
+### Infrastructure logicielle pour la mise en oeuvre automatique des actions
+
+![Infrastructure logicielle pour la mise en oeuvre automatique des actions](docs/img/AIF.jpg)
+
+
 ## Outputs <a id="Outputs"></a>
+[TODO]
 
 ### IHM
-![IHM](https://gitlab.utc.fr/nguyminh/Enjambeur_Agricole/blob/dev/docs/img/front.PNG)
+![IHM](docs/img/front.PNG)
 
 ## Lancement <a id="Lancement"></a>
 
-Le fichier Python launchRobot.py permet de lancer l'initialisation du robot. C'est un fichier test pour vérifier que l'initialisation des composants est correcte, et que l'on peut ensuite charger des infos, envoyer et recevoir des messages. Au niveau fonctionnement, on charge un XML contenant des informations relatives au type de robot. Les composants relatifs à l'archi robot sont ensuite initialisés. On ouvre ensuite un serveur socket pour écouter les communications entrantes.
+Le fichier Python **launchRobot.py** permet de lancer l'initialisation du robot. C'est un fichier test pour vérifier que l'initialisation des composants est correcte, et que l'on peut ensuite charger des infos, envoyer et recevoir des messages. Au niveau fonctionnement, on charge un XML contenant des informations relatives au type de robot. Les composants relatifs à l'archi robot sont ensuite initialisés. On ouvre ensuite un serveur socket pour écouter les communications entrantes.
 
 
-Le fichier Python launchServeur.py va télécharger des informations relatives à l'environnement, puis mettre en place l'architecture pour communiquer avec les robots.
+Le fichier Python **launchServeur.py** va télécharger des informations relatives à l'environnement, puis mettre en place l'architecture pour communiquer avec les robots.
 
 Lancer d'abord les robots indépendamment, puis le serveur, et attendez la connexion. Un message de mapping va ensuite être échangé, du serveur vers le robot (test).

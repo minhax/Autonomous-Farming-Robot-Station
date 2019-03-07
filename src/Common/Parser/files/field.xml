@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+   <type>
+      <type name="object">field</type>
+      <type name="version">lettuce</type>
+   </type>
+   <dimensions>
+      <dimension name="length">4000</dimension>
+      <dimension name="width">5000</dimension>
+      <dimension name="rows">10</dimension>
+      <dimension name="distanceBetweenRows">1</dimension>
+   </dimensions>
+   <floor>
+      <floor name="type">Sand</floor>
+      <floor name="humidity">60</floor>
+   </floor>
+</data>
